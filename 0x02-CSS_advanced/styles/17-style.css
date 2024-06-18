@@ -417,6 +417,11 @@ template {
   --section-tagline-transform: uppercase;
   --section-title-margin: 0;
   --section-title-color: var(--color-black);
+  --section-padding: 5rem 0;
+  --section-header-padding: 0 0 3rem;
+  --section-body-padding: 0 0 3rem;
+  --section-footer-padding: 3rem 0 0;
+  --footer-padding: 5rem 0 1rem;
 }
 
 *,
@@ -473,9 +478,16 @@ a:active {
   color: var(--color-primary);
 }
 
+.section {
+  padding: var(--section-padding);
+}
+
 .section-header {
   text-align: var(--section-header-align);
+  padding: var(--section-header-padding);
 }
+
+
 
 .section-title {
   font-family: var(--font-family-title);
@@ -494,6 +506,5 @@ a:active {
 
 .container {
   width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 }
