@@ -32,6 +32,6 @@ a {
   color: var(--color-primary);
 }
 
-.section-title {
+.card-services>.card-title {
   font-family: var(--font-family-title);
 }
