@@ -380,7 +380,7 @@ template {
 
 /* ================== End of Normalize ================== */
 
-/* ================== colors =====================*/
+/* ================== variables for colors =====================*/
 :root {
   --color-primary: #d73953;
   --color-black: #090909;
@@ -388,44 +388,47 @@ template {
   --color-light-grey: #f3f3f3;
   --color-dark-grey: #353535;
   --text-color: var(--color-black);
+  --section-title-color: var(--color-black);
 
-  /* ================== font family =====================*/
-  --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* ================== variables for font family =====================*/
+  --font-family-base: "Open Sans" "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family-title: "Raleway" "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-
-  /* ================== font sizes ====================== */
+  /* ============== variables for fonts sizes =================*/
   --font-size-small: 1.2rem;
   --font-size-medium: 1.6rem;
   --font-size-large: 1.8rem;
   --font-size-x-large: 2.3rem;
   --font-size-xx-large: 4.8rem;
 
-  /* ================== font weight ====================== */
-
+  /* ================ variables for font-weight ======================= */
   --font-weight-regular: 400;
   --font-weight-bold: 700;
 
-  /* ================== Line Height  ====================== */
-
+  /* ================== Variables for line heights ===================*/
   --line-height-small: 1.2;
   --line-height-base: 1.5;
   --line-height-big: 1.8;
 
-  /* ================== Section ====================== */
+  /* ================= Variables for alignment =================*/
   --section-header-align: center;
+  --section-footer-align: center;
+
+  /* ================= Variables for transformations ==================*/
   --section-tagline-transform: uppercase;
+
+  /* ================ Variables for margins ================== */
   --section-title-margin: 0;
   --section-tagline-margin: 0;
-  --section-title-color: var(--color-black);
-  --section-padding: 5rem 0;
+
+  /* ================= variables for padding ================== */
+  --section-padding: 5rem;
   --section-header-padding: 0 0 3rem;
   --section-body-padding: 0 0 3rem;
   --section-footer-padding: 3rem 0 0;
-  --section-footer-align: center;
   --footer-padding: 5rem 0 1rem;
 
-  /* ================== Nav ====================== */
+  /*=========== all menus custom properties =====================*/
   --nav-item-font-family: var(--font-family-title);
   --nav-item-font-weight: var(--font-weight-bold);
   --nav-item-font-size: var(--font-size-medium);
@@ -593,4 +596,34 @@ ul.row {
 
 .footer ul {
   text-align: right;
+}
+
+.footer-address {
+  color: var(--text-color);
+}
+
+.social-link {
+  display: block;
+}
+
+.social-link svg {
+  fill: var(--text-color);
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+[class^="col-"] {
+  float: left;
+  padding: 0.5rem;
+}
+
+/*================ Add a dark theme to sections ===================== */
+[data-section-theme="dark"] {
+  --text-color: var(--color-white);
+  --section-title-color: var(--color-white);
+  background-color: var(--color-black);
 }
